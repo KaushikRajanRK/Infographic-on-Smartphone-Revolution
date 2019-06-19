@@ -1,0 +1,761 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20182.18.0627.2230                               -->
+<workbook original-version='18.1' source-build='2018.2.0 (20182.18.0627.2230)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SortTagCleanup />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style-theme name='modern' />
+  <datasources>
+    <datasource caption='Sheet1 (Book4)' inline='true' name='federated.0a5prmr1i2n3l717v7klr0t9me4a' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Book4' name='excel-direct.1kpbwyq1qw0mvr13f0r651evwctc'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='D:/Education/IRELAND/NCI/Moodle Documents/SEM 2/DV/CA2/Dataset/New folder (2)/Book4.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.1kpbwyq1qw0mvr13f0r651evwctc' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:B17:no:A1:B17:0' header='yes' outcome='6'>
+            <column datatype='string' name='Mobile Model' ordinal='0' />
+            <column datatype='real' name='Radiation (in watts per kilogram)' ordinal='1' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Mobile Model</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Mobile Model]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Mobile Model</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Radiation (in watts per kilogram)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Radiation (in watts per kilogram)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Radiation (in watts per kilogram)</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:B17:no:A1:B17:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='string' name='[Mobile Model]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column-instance column='[Mobile Model]' derivation='None' name='[none:Mobile Model:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.482432' measure-ordering='alphabetic' measure-percentage='0.517568' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Mobile Model:nk]' palette='red_10_0' type='palette'>
+            <map to='#ae123a'>
+              <bucket>&quot;Xiaomi Mi A1&quot;</bucket>
+            </map>
+            <map to='#b8163a'>
+              <bucket>&quot;OnePlus 5T&quot;</bucket>
+            </map>
+            <map to='#ca223c'>
+              <bucket>&quot;Xiaomi Mi Max 3&quot;</bucket>
+            </map>
+            <map to='#d3293d'>
+              <bucket>&quot;OnePlus 6T&quot;</bucket>
+            </map>
+            <map to='#da323f'>
+              <bucket>&quot;HTC U12 life&quot;</bucket>
+            </map>
+            <map to='#e13b42'>
+              <bucket>&quot;Xiaomi Mi Mix 3&quot;</bucket>
+            </map>
+            <map to='#e74545'>
+              <bucket>&quot;OnePlus 5&quot;</bucket>
+            </map>
+            <map to='#ec5049'>
+              <bucket>&quot;Google Pixel 3 XL&quot;</bucket>
+            </map>
+            <map to='#f05c4d'>
+              <bucket>&quot;iPhone 7&quot;</bucket>
+            </map>
+            <map to='#f36754'>
+              <bucket>&quot;Sony Xperia XZ1 Compact&quot;</bucket>
+            </map>
+            <map to='#f5715d'>
+              <bucket>&quot;HTC Desire 12/12+&quot;</bucket>
+            </map>
+            <map to='#f77b66'>
+              <bucket>&quot;OnePlus 6&quot;</bucket>
+            </map>
+            <map to='#f9856e'>
+              <bucket>&quot;Google Pixel 3&quot;</bucket>
+            </map>
+            <map to='#fa8f79'>
+              <bucket>&quot;iPhone 8&quot;</bucket>
+            </map>
+            <map to='#fb9984'>
+              <bucket>&quot;ZTE AXON 7 mini&quot;</bucket>
+            </map>
+            <map to='#fca290'>
+              <bucket>&quot;Xiaomi Redmi Note 5&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Reino Unido&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Book4)' name='federated.0a5prmr1i2n3l717v7klr0t9me4a' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0a5prmr1i2n3l717v7klr0t9me4a'>
+            <column datatype='string' name='[Mobile Model]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Radiation (in watts per kilogram)]' role='measure' type='quantitative' />
+            <column-instance column='[Mobile Model]' derivation='None' name='[none:Mobile Model:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Radiation (in watts per kilogram)]' derivation='Sum' name='[sum:Radiation (in watts per kilogram):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Xiaomi Mi A1&quot;</bucket>
+              <bucket>&quot;OnePlus 5T&quot;</bucket>
+              <bucket>&quot;Xiaomi Mi Max 3&quot;</bucket>
+              <bucket>&quot;OnePlus 6T&quot;</bucket>
+              <bucket>&quot;HTC U12 life&quot;</bucket>
+              <bucket>&quot;Xiaomi Mi Mix 3&quot;</bucket>
+              <bucket>&quot;OnePlus 5&quot;</bucket>
+              <bucket>&quot;Google Pixel 3 XL&quot;</bucket>
+              <bucket>&quot;iPhone 7&quot;</bucket>
+              <bucket>&quot;Sony Xperia XZ1 Compact&quot;</bucket>
+              <bucket>&quot;HTC Desire 12/12+&quot;</bucket>
+              <bucket>&quot;OnePlus 6&quot;</bucket>
+              <bucket>&quot;Google Pixel 3&quot;</bucket>
+              <bucket>&quot;iPhone 8&quot;</bucket>
+              <bucket>&quot;ZTE AXON 7 mini&quot;</bucket>
+              <bucket>&quot;Xiaomi Redmi Note 5&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]' value='144' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]' value='89' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='height-header' value='24' />
+          </style-rule>
+          <style-rule element='field-labels'>
+            <format attr='color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]' value='-90' />
+            <format attr='color' field='[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]' value='#ffffff' />
+            <format attr='color' field='[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]' value='#ffffff' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#1b3c65' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <encodings>
+              <color column='[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='1424' />
+                <format attr='maxwidth' value='1424' />
+                <format attr='minheight' value='540' />
+                <format attr='maxheight' value='540' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</rows>
+        <cols>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</cols>
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;ZTE AXON 7 mini&quot;</value>
+                <value>1.29</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='1' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Xiaomi Redmi Note 5&quot;</value>
+                <value>1.29</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='2' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Xiaomi Mi Mix 3&quot;</value>
+                <value>1.45</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='3' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Xiaomi Mi Max 3&quot;</value>
+                <value>1.5800000000000001</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='4' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Xiaomi Mi A1&quot;</value>
+                <value>1.75</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='5' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Sony Xperia XZ1 Compact&quot;</value>
+                <value>1.3600000000000001</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='6' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;OnePlus 6T&quot;</value>
+                <value>1.55</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='7' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;OnePlus 6&quot;</value>
+                <value>1.3300000000000001</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='8' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;OnePlus 5T&quot;</value>
+                <value>1.6799999999999999</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='9' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;OnePlus 5&quot;</value>
+                <value>1.3899999999999999</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='10' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;iPhone 8&quot;</value>
+                <value>1.3200000000000001</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='11' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;iPhone 7&quot;</value>
+                <value>1.3799999999999999</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='12' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTC U12 life&quot;</value>
+                <value>1.48</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='13' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;HTC Desire 12/12+&quot;</value>
+                <value>1.3400000000000001</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='14' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Google Pixel 3 XL&quot;</value>
+                <value>1.3899999999999999</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='15' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+                  <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[sum:Radiation (in watts per kilogram):qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Google Pixel 3&quot;</value>
+                <value>1.3300000000000001</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='100'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='columns' />
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0a5prmr1i2n3l717v7klr0t9me4a].[none:Mobile Model:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+      rkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>

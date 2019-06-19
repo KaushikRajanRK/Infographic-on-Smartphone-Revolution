@@ -1,0 +1,454 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20182.18.0627.2230                               -->
+<workbook original-version='18.1' source-build='2018.2.0 (20182.18.0627.2230)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style-theme name='modern' />
+  <datasources>
+    <datasource caption='Sheet1 (no of smart users)' inline='true' name='federated.1mgzwmv16jpu8x19l8min0okzitn' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='no of smart users' name='excel-direct.1m8v5yr15jmj8o1gy4twm0r228ph'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='D:/Education/IRELAND/NCI/Moodle Documents/SEM 2/DV/CA2/Dataset/no of smart users.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.1m8v5yr15jmj8o1gy4twm0r228ph' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:B10:no:A1:B10:0' header='yes' outcome='2'>
+            <column datatype='integer' name='Year' ordinal='0' />
+            <column datatype='real' name='Smartphone users in millions' ordinal='1' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Smartphone users in millions</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Smartphone users in millions]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Smartphone users in millions</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:B10:no:A1:B10:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.482432' measure-ordering='alphabetic' measure-percentage='0.517568' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Reino Unido&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontname='Tableau Bold'>Smartphone users in the US</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (no of smart users)' name='federated.1mgzwmv16jpu8x19l8min0okzitn' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1mgzwmv16jpu8x19l8min0okzitn'>
+            <column datatype='real' name='[Smartphone users in millions]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Smartphone users in millions]' derivation='Sum' name='[sum:Smartphone users in millions:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#7acdf1' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#1b3c65' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1mgzwmv16jpu8x19l8min0okzitn].[sum:Smartphone users in millions:qk]</rows>
+        <cols>[federated.1mgzwmv16jpu8x19l8min0okzitn].[none:Year:qk]</cols>
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[sum:Smartphone users in millions:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[none:Year:qk]</field>
+                  <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2010</value>
+                <value>62.600000000000001</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='1' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[sum:Smartphone users in millions:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[none:Year:qk]</field>
+                  <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2011</value>
+                <value>92.799999999999997</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='2' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[sum:Smartphone users in millions:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[none:Year:qk]</field>
+                  <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2012</value>
+                <value>122.0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='3' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[sum:Smartphone users in millions:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[none:Year:qk]</field>
+                  <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2013</value>
+                <value>144.5</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='4' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[sum:Smartphone users in millions:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[none:Year:qk]</field>
+                  <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2014</value>
+                <value>171.0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='5' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[sum:Smartphone users in millions:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[none:Year:qk]</field>
+                  <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2015</value>
+                <value>190.63999999999999</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='6' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[sum:Smartphone users in millions:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[none:Year:qk]</field>
+                  <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2016</value>
+                <value>208.61000000000001</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='7' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[sum:Smartphone users in millions:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[none:Year:qk]</field>
+                  <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2017</value>
+                <value>246.59999999999999</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='8' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[sum:Smartphone users in millions:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[none:Year:qk]</field>
+                  <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2018</value>
+                <value>257.30000000000001</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1mgzwmv16jpu8x19l8min0okzitn].[none:Year:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAATK0lEQVR4nO3dWXMc13nG8X93z75hsBMkAZIiKUqUKEoUZSmRLblsx0uqUuVKKqnKVW7z
+      KXKRTxLf5SZRUkkqFccVO7Yc2ZIIAgS4YSFmsM8MMMDsSy8nFyAgD0QNARKzYPr9XZEDDOcl
+      cJ7u06dPn6MppRRCuJQH4O+n8lgSA+FCHgBLgX3MAMSqWRRaK2oSom08L/pGhUYh0H+StQjR
+      dnqnCxCikyQAwtUkAMLVml4D7CzNsrrwhP6BCI5/CCe3AuExLr59q131CdFSTc8A8Ymr6I7N
+      zsoClWyGmuXF3N0iYJYImqV21ShEyzQ9AyQ//Xe8feeIjA1TzJv4jTpExqh6w3jtertqFKJl
+      mgbg4sd/0a46hOgIuQgWriYBEK4mARCuJgEQriYBEK4mARCuJgEQriYBEK4mARCu1vROcH51
+      jt2dMhM33iIzP4ehVyE0ysDYWLvqE6KlmgYgPHKB1Yf/xm5YZ3n2MdGBGBoZCYDoGU27QOn7
+      v8ETPU8utU4tl8GpFXE0TWaDip7R9AwQv/gWgUqd+NkPGHu7BHYdvGGqXp/MBhU9oWkAgv0j
+      BJ8+9+4LhoFwG0oSon1kFEi4mgRAuJoEQLiaBEC4mgRAuJoEQLiaBEC4mgRAuFrTG2GOWcOy
+      HHRdoTDQcNAML4bnhReVFqKrNG3Jhc1lFu9+zoU332Lt8Rw+3YbgIK999P121SdESzXtAgUi
+      QSKDE3i9BrGzVzCC/Rg4MhlO9IymZ4DtxBN8wSDbq8v4+sYJjfShh2VpRNE7mgbg7DsftasO
+      ITpCRoGEq0kAhKtJAISrSQCEq0kAhKtJAISrSQCEq0kAhKtJAISrPXef4M3ldeL9YWq2H4+1
+      C+Exzl9/o131CdFSzfcJvnANp1qkWNilXs5QrjhU0ut4rRo+u9auGoVomaYBSP76E7TgIF7D
+      A1oQwyljRGI4uoGjGe2qUYiWab5P8Hf/6pmv24Cly0Mx4vSTi2DhahIA4WoSAOFqEgDhahIA
+      4WoSAOFqEgDhahIA4WoSAOFqTW/nKuVQSK2jqzoV04NPq6CFRogN9rerPiFaqmkAqtsrLH72
+      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
+      sI94GSIAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>

@@ -1,0 +1,564 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20182.18.0627.2230                               -->
+<workbook original-version='18.1' source-build='2018.2.0 (20182.18.0627.2230)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SortTagCleanup />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style-theme name='modern' />
+  <datasources>
+    <datasource caption='Sheet1 (Book3)' inline='true' name='federated.1749yqj0pyup0114w9aya1mxu3qn' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Book3' name='excel-direct.0y32blm1p96f4l164kgpb18m6ufq'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='D:/Education/IRELAND/NCI/Moodle Documents/SEM 2/DV/CA2/Dataset/New folder (2)/Book3.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0y32blm1p96f4l164kgpb18m6ufq' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:C11:no:A1:C11:0' header='yes' outcome='6'>
+            <column datatype='string' name='Time' ordinal='0' />
+            <column datatype='real' name='Percentage' ordinal='1' />
+            <column datatype='string' name='Before or after' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Time</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Time]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Time</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percentage</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Percentage]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Percentage</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Before or after</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Before or after]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Before or after</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C11:no:A1:C11:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[Before or after]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;After waking&quot;' value='AFTER WAKING' />
+          <alias key='&quot;Before Sleeping&quot;' value='BEFORE SLEEPING' />
+        </aliases>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='real' default-format='p0%' name='[Percentage]' role='measure' type='quantitative' />
+      <column datatype='string' name='[Time]' role='dimension' type='nominal' />
+      <column-instance column='[Time]' derivation='None' name='[none:Time:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.5' measure-ordering='alphabetic' measure-percentage='0.5' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Time:nk]' palette='blue_10_0' type='palette'>
+            <map to='#2a5783'>
+              <bucket>&quot;Immediately&quot;</bucket>
+            </map>
+            <map to='#4776a4'>
+              <bucket>&quot;5 Mins&quot;</bucket>
+            </map>
+            <map to='#6798c1'>
+              <bucket>&quot;15 Mins&quot;</bucket>
+            </map>
+            <map to='#8bbadc'>
+              <bucket>&quot;30 Mins&quot;</bucket>
+            </map>
+            <map to='#b9ddf1'>
+              <bucket>&quot;An hour&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Reino Unido&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Book3)' name='federated.1749yqj0pyup0114w9aya1mxu3qn' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1749yqj0pyup0114w9aya1mxu3qn'>
+            <column datatype='string' name='[Before or after]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;After waking&quot;' value='AFTER WAKING' />
+                <alias key='&quot;Before Sleeping&quot;' value='BEFORE SLEEPING' />
+              </aliases>
+            </column>
+            <column datatype='real' default-format='p0%' name='[Percentage]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Time]' role='dimension' type='nominal' />
+            <column-instance column='[Before or after]' derivation='None' name='[none:Before or after:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Time]' derivation='None' name='[none:Time:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Percentage]' derivation='Sum' name='[sum:Percentage:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Time:nk]' direction='ASC' using='[federated.1749yqj0pyup0114w9aya1mxu3qn].[sum:Percentage:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Time:nk]' value='107' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#7acdf1' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Time:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1749yqj0pyup0114w9aya1mxu3qn].[sum:Percentage:qk]</rows>
+        <cols>([federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Before or after:nk] / [federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Time:nk])</cols>
+        <mark-labels>
+          <mark-label id='20' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Before or after:nk]</field>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Time:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[sum:Percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Before or after:nk]</field>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Time:nk]</field>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[sum:Percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;After waking&quot;</value>
+                <value>&quot;An hour&quot;</value>
+                <value>0.89000000000000001</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='21' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Before or after:nk]</field>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Time:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[sum:Percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Before or after:nk]</field>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Time:nk]</field>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[sum:Percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;After waking&quot;</value>
+                <value>&quot;30 Mins&quot;</value>
+                <value>0.76000000000000001</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='22' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Before or after:nk]</field>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Time:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[sum:Percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Before or after:nk]</field>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Time:nk]</field>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[sum:Percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;After waking&quot;</value>
+                <value>&quot;15 Mins&quot;</value>
+                <value>0.62</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='23' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Before or after:nk]</field>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Time:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[sum:Percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Before or after:nk]</field>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Time:nk]</field>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[sum:Percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;After waking&quot;</value>
+                <value>&quot;5 Mins&quot;</value>
+                <value>0.41999999999999998</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='24' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Before or after:nk]</field>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Time:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[sum:Percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Before or after:nk]</field>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Time:nk]</field>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[sum:Percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;After waking&quot;</value>
+                <value>&quot;Immediately&quot;</value>
+                <value>0.16</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='25' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Before or after:nk]</field>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Time:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[sum:Percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Before or after:nk]</field>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Time:nk]</field>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[sum:Percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Before Sleeping&quot;</value>
+                <value>&quot;An hour&quot;</value>
+                <value>0.81000000000000005</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='26' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Before or after:nk]</field>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Time:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[sum:Percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Before or after:nk]</field>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Time:nk]</field>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[sum:Percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Before Sleeping&quot;</value>
+                <value>&quot;30 Mins&quot;</value>
+                <value>0.66000000000000003</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='27' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Before or after:nk]</field>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Time:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[sum:Percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Before or after:nk]</field>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Time:nk]</field>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[sum:Percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Before Sleeping&quot;</value>
+                <value>&quot;15 Mins&quot;</value>
+                <value>0.5</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='28' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Before or after:nk]</field>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Time:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[sum:Percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Before or after:nk]</field>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Time:nk]</field>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[sum:Percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Before Sleeping&quot;</value>
+                <value>&quot;5 Mins&quot;</value>
+                <value>0.34999999999999998</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='29' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Before or after:nk]</field>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Time:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[sum:Percentage:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Before or after:nk]</field>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Time:nk]</field>
+                  <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[sum:Percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Before Sleeping&quot;</value>
+                <value>&quot;Immediately&quot;</value>
+                <value>0.14000000000000001</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Time:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1749yqj0pyup0114w9aya1mxu3qn].[none:Time:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAASNUlEQVR4nO3d+W8c533H8ffM3ge5J+9LPESJknX4lGPLdtu0sY0iTYCgKJqiRVIURYG0
+      f0KA/gf9qT/1lxZogR6AkaRukct17DiOLcs6aEkUD/ESuctzd7n3NfP0Bxm2KYnSUtrlcjXf
+      FyBwNbt85jvL+ezzzOwcmlJKIYRF2QH+/koaU2IgLMgOYCgkAMKS7M0uQBx+yqhw8b/+CVeg
+      j2Mvn6dqwNQvf8T4q6/jagtRymbQVQV3uAebXWMnHsMTDGCUDNxtXnY2NsjPX2RH+RmaOInd
+      004xkyHQ3YMyq8RuTNL31DOkV2e5/rO36Tp5hsjwcTSl0O1ubFoFzR3E7XXXfdkkAKImZrWC
+      Uc5z7Sf/gvJ143Ca3L7yKZXULVyRE2zPX6Lz1NfpDORYX8+ytrTB09/5U3aWrnPlnZ8zPNJH
+      tbjNlbcu4Qn78HY8T6C7h2pmFZu/B4D2vqOEB49i04rMvP9THHYdh8NBNr6CZ/ApTn/jD+u+
+      XBIA8XCaRqCrF0egD8+RAUxHAF0rUdpex97xPN7oMC43BIaG8PoMVOwig6fP4vV7yWza6Bw+
+      QVt/N1q+QHtkAGdbO672IQCK6SqRgcEvZhXoHcDhBs3VgdNlA0PR3tmNIzS4V3WPt2hKKfXD
+      y7IRLKxJr0cjvlK6Hs2IJ9hhXUfqMgTSlVGPZg4tVS1w5e0fM3Z2goXZVboGBlj+9H36jo+y
+      tl5l4OQ4qxfew94eZeL3v01s8mNKyRUCg+MoR4DY5AWGj/eS16IY1Qz56Wvk/UcId3pxmCXy
+      mQztw8/S0dfV7EVtmMO6jtSlB3jSJWYukNtcZn1xhUrFpH3gKIGuPsJdUcrlKnaXi1J2h1I2
+      h6aBqubRbQ5uT16jvDlNOrbI5mqMy2//mM7RIxSTG+S2b7MV3yC9uUOkr49y5nB+Qj7pJAA1
+      KJk+Xvr+32IUcgw9dx6Pz4033IHuasPjcVIuFOh9+jU6B/upmibBSBue4XOE+wfQ3GHOf/9v
+      qOZyvPjd77E6+Rn+niFGX/4GtkqBUF8XybV1dLvsj2iGumwEtxWTZNyh+lUlnjiHdR2p0zaA
+      SVsxWY+mxBPKV8k2u4T7qksATE0/lOkWh8thXEdkG0BYmgRAWJoEQFiaBEBYmgRAWJoEQFha
+      TbtBlVHFVKChQLehjCq6zQ6ahqZpja5RNFlue4Plyx8SHhyjlElhczhx+tpwt4do6+hudnmP
+      paYAzLzzI6q6C7uZB1c7O1OfEjrzKkeeexmHw9boGkWTpddX2bw1RaWQp5DaJjQ4ytrNq/Sd
+      OYc/2tXSH4I1DYGiw2PsrK9idwex6zD69TfJxxZZ+ewq7koOTyXX6DpFE1WKeXzhDoJ9Qzi8
+      PoaeewV3W5DFj99FKbPZ5T2Wmo4FSs5/RjavcNlL4O7E57VRLuYolm30jI0d2uM8RH0opUAp
+      7hzq+vnPO0+g6bVtRh7WdaSmIVBo5BR3l+5rQDGieSJ26HHt9az2+T++8vPux/e61gIDAzkG
+      VwDg1iHiaHYVB092gwpLkwAIS5MACEuTAAhLkwAIS5MACEuTAAhLkwAIS5MACEuTAAhLkwAI
+      S5MACEuTAAhLq+lo0M2pC6QzBl63gXJHyC9PERg9RbB/RM4IEy2tpgDsxJZIZ00IBkFPYRpV
+      1qevoLv8dHZ3YDerja5TiIaoaQik2d3YHDaUkcW0Beg9eQqn08vW/By6aRzamx8I8TA19QCj
+      r33znmnj/RMAVIBydc9TiYQ41GQjWFianBLZotZnrhG/cRlfOIo/2k3s2kW6J87Se/LZmk9U
+      F9IDtCxPIER0+CiJ5VsUdhL4O7rZmLnG9tJcs0trKdIDtKhcYpOO0RMUMztouk54cAyHx0dh
+      Z7vZpbUUCUCL6pk4C8DY+de/mNYxOtGsclqWBOAQ86dT2Kr1+46l4nSS97fXrb0ngQTgENOU
+      QlePcfvOe9qrW1NPDNkIFpYmARCWJgEQliYBEJYmARCWJgEQliYBEJZW2wkxt2fI5iqEO4Io
+      V4jyzjq+cCe604PNJhkSraumAPi7+ol/8C75uAmaInlzkvZTr3D0a682uj4hGqqmj+/y1gz+
+      oWfQdBuaZufUd/6MYmye2Q9+LTfJEy2tph5A93bR2dFN0TWG8kTRHIrx33udYlmn6PDhMMqN
+      rlOIhqgpAK5gDwDO/vFd0731r0eIAyVbsMLSJADC0iQAwtIkAMLSJADC0iQAwtIkAMLSJADC
+      0uSk+DoxKmU++59/p+vYabbmb6JpGka1QmToKP1nzjW7PLEH6QHqpFzIU8qmKaS2cXp89J95
+      EYfLw9b8TXKJzWaXJ/YgAagTt7+dyJFx0DSMahmXv43O8afwRbvQbXITkcNKhkD7oJTCLFf2
+      fH74+d/Z9X9nr59Q7zAARun+BwzqDrtczLaJJAD7YJYrpCZv1LVN/+gRXOFgXdsUtZOPHmFp
+      NfUAscvvU9Z8kF8Hd5jMrUmCx5+n6/hpnHKTPNHCauoBtleWyCfXMMo6RnaL4OAwyYUbbC3M
+      yxlhoqXV1AN0jR4jsZXG6VEoVw+hiBfN5aecy8oZYaKl1RSAzhMv0HnXNH/f0QaUI8TBko1g
+      YWkSAGFpEgBhaRIAYWkSAGFpEgBhaRIAYWkSAGFpEgBhaRIAYWkSAGFpdwVAEb/2MYnYanOq
+      EeKA7Q5AeYeFCx8wd+mTJpUjxMHaHQDdiS8UwlFJs7641KSShDg4dx0ObWL3BNCcboo7m8AQ
+      AGvXP8LQ29FKmyh3hNzSFMGx0wQHx+SMMNHS7jkfoJzeQg8OMXj62S+mZddXwVtCKxUgvYhu
+      09mYuYru8tHd04nD3PtKCUIcZruHQJqN0OAoNocNTdO+mBwaHKOQTgEFcIboPn4Ct7edxPLy
+      AZcrRH3t6gGSc5eJLyzS3nNk14siY2eIjJ3ZNW2sfwKAKlDRHQ0tUohG2dUDhEZO4vF48LQF
+      mlWPEAfqnr1ARjFNuVRqUjlCHKy7NoIV6fgiZUe4KcUIcdB2B0Cz89S3/xole3WEReweApll
+      NqavkIjHm1SOEAfrrgBUKeULuHztTSpHiIN110awA2WWKBULTSpHiIN1TwB8fi+6LldNF9aw
+      a02f/dV/Y7iiHD/3YrPqqbuthWnsThf5VAK7y40nEMLmcOINRppdmjgEdvUAxewOqeXrzF34
+      bbPqqatyIcfkT/4Vb7iDxPIc2wvT3Pzlj6mWis0uTRwSu3qAU3/0l82qoyESi7PoNge3L32I
+      P9rFwNmvce1//4OpX7zFC9/9gdyaSDzZt0jqnjhLaGCEciFHOZcB4OQbf0wxk5KVXwBPQAAy
+      G1ukVtdrem0+OfvF4+Tt7fu+RtOg/+zJutQmDr+WD0AuscPGzHz9GtQ0CYCF1BQApUziU1dx
+      2EyUO0JhdZbg8HG80V4cckaYaGE1BSC9fIOVmetEQh2gxylubZHL5eh/xocjIgfOidZV05Zg
+      NpmglNqiUk5RNd0cOfciqlxl5bOrcpM80dJq6gH6zr5Kz6mXwDRBt4EGE2+MoRQU7Xa5SZ5o
+      WTVvBOs2O8hwXzxhZGe4sDQJgLA0CYCwLGWaEgBhXZquSwCEdUkPICxN0/XWPxZIiAdRSjH9
+      zm/2fF4CIJ5sCnLbyT2fliGQsDQJgLA0CYCwNAmAsDQJgLC0mvYCVUs5DEND1wywuTFKeRxu
+      L5rNjq5rD29AiEOqpgDkN2PMX76K16OBw0Nq6hLB068y8sJ5CYBoaTUNgXydvei6gc3pw6Zp
+      HHvzW+TjCyxe+kTOCBMtraYeIBNbIjLyFG5HFTwdONwaI197hWJZp+jwyRlhomXVFIDgkRME
+      7zNdLqIuWp3sBRKWJgEQliYBEJYmARCWJgEQliYBEJYmARCWJgEQliYBEJYmARCWJgEQliYB
+      EJYmARCWJgEQllbT4dBbs1dIbuzg8ZjgipBbuk7g6FnCR8Zxyk3yRAurqQeIDB+nkt+hlC5R
+      2l7G7vGwNTvJTmwVR7WE0yg1uk4hGqKmAMz+4j9xBLvRbGU0T5Suo8fxtodJxWOYug1Tk15A
+      tKaahkDjb/7FPdP8/ccBMICqLpcYFa1JNoKFpR34R3c+uUV6I0Y5m8bp85NaXSI6MkFkaAxN
+      lzyKg3Xga1wpmyZ1e4H41BWq5TLF9A7xG5fIJTYPuhQhDj4Avmg3NqcLX7iD7GacnhNPg1Ks
+      T08edClCHPwQyOnxcvTVN3ZN6zp26qDLEIeYUuq+0zWt/lchbEgArvz8/8g+4K4c+9UxNMCx
+      l16oW3vi8KqWilz4t3/k3J//HR/+8z8QPTJOtVSk+8TTdIwcr/v8GhKA1NoGqbWNurXn9vvq
+      1pY43GxOF6GBEW5f/i3VUpGuY6dZufoRq5MXiAwdRbfV9zsn2YEvDhVN0wgPjRE5Mo7D66O9
+      q4++Uy+QWJ5rnSGQEA9SKZUoZLJ7Pu8J95JPZ2nrHiafyeHwh+k68QKZxN7Dan84hP4Iu9El
+      AOLArd1a5NO3f1bXNt/4wV/h9nn3/XvyzZOwNAmAsDQJgLA0CYCwtJo2gpUyyCdSqMoOyh2l
+      tL1CW1cfNrcfu13OBRCtq6YA5GKzzF6exe+3gVYlOTVJ+1PnOfrSa42uT4iGqmkI5O8ewe11
+      AQqwc/ZPvkchPs/0e+/KTfJES6vtewDdzuDZZ6GSQbkjKJvBide/SbEkN8kTra22AGg6vnAE
+      iOya7GpAQUIcJNkLJCxNAiAsTQIgLE0CICxNAiAsTQIgLE0CICxNAiAsTQIgLE0CICxNAiAs
+      TQIgLG0fV4VQzL37FrjCpKc/JXTqPH1nnpdbJImWtq8eQNP9aEaB3mfPkVmZZX16qlF1CXEg
+      9nVdIE/QC+5O/AEnuquNclVGUKK17SMAGr1nXvnif/7uOz/dlRy+yu6rfI31tJPz3P8Kv7ta
+      VCZKe3iIwhE3bcUvrwqmKYX6/DJ5prOCvfPhF0TSMFG1dHgau+alKxPz8xpVtYrdW8Nycefc
+      uVq4VQ57Ud0zLwCPkUNXxkPb0JXCrOGygXajgl78sr2vvv92A4oPn1XNfzOAtuKXj7+6jnS7
+      DCaGO+o6r1A1g71452aNu95HpRh6wPqhKaXUDy+nMWv9i91HWzFJxh3a9+/ppoGp728bQlMm
+      vnKGrCvQ8HnBoy2bpsw7Aajxj/c484JHXDalaCvtkHEHGz8vHm3ZDmJeDRvDJGZuUHnIa6rV
+      HEu/+SmFz++ymt1ev/PAyLFxa+m+v6PQyDv8D25YVZh//6dkUmny8RvEF1ZZ+OCXxGen9h30
+      nLPtwctQSLI6PUVs8gM2l5bAyDH38cdklj/j1sUPyWYKdZtXMRlj7jfvkI7Pc+vCRygFS799
+      h5JRYeaDX7C5OFvzvGqZX2phkuTmV6/HmWd9bnFf89iTUWJ9bu6BLzF1GxtzV9i6dWe5KplN
+      SqU73dTmzA32uI3AQ5cLYHv6Mis3bzTu2qDp5QXi8XmqqSQ2dwiMNNWKiScUxizk8Ia7ya4v
+      kFlbQw/2sT0/QyUXI9Q9iO60sTUXp5Q5TeTYM3g9ji8b1rSH3pbVKKbZii8TPPYsRmKZtTUv
+      ucu/JvryH7A5dRFPIEIumWD0d79FW+DBb5b5kDtglrJ5UvEZzOQG4eNhMP3ELl+kmgqSLRkk
+      Vm7h9rTjcpYJDD5H1+jwI8/LHepF5d/j9pU8Hp+bkgH59QUW38+ykUij0nMsX/oIdyiC3dnG
+      0ZdeQd9rZPSw91EpErEVqmyw9kkcPdDHsZefZv5XP2Fn7RjFbAbd6yUQ6WT79gq9T58n2tP1
+      wPp3L2yVjRsfErv0HrrTgWF40BxlNN1BoDNKMVPG7YaNlXm6B8bZuvkhhewOjugEqphE6R6K
+      xTS6zU3fybP7eh8BNhancHeON/Z7AKMKXn8Im66hOQO4fCGquW3Wpi6RT21TLiuMYpLVyU9I
+      rt7GE4iwPXeFTCJJe3cfy5OTeL668tdIs7vp7O8jFVsFNFTqFvboBMV0CpsnjFnMY+bW2FpZ
+      f+xl9EZ7sGkQHT1JKjYPQLAjxE66gFHIkisZuF02dB1Wp6891rwK2ytUKyY2u0licxu7Dq7w
+      IOtLC4SjHvJbKwQGhigVDeLXLmAY5iPPq5KJk90pkV9fxXQFMKtpAEIjJ8jHp6kU8xRSCVYm
+      PyWfrtC+n5X/c6paoq2rH6+nje2FdXyBKI52H4nbM2yvLlHIpNHtOtnVOWI3r6NMG4XtVTbm
+      Z1CGIr88iS00+EjL1zkyQXp1kf8HthRyMlmPgT8AAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>

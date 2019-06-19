@@ -1,0 +1,998 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20182.18.0627.2230                               -->
+<workbook original-version='18.1' source-build='2018.2.0 (20182.18.0627.2230)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style-theme name='modern' />
+  <datasources>
+    <datasource caption='Sheet1 (Book2)' inline='true' name='federated.07hl5o50t2ydfc18zl9qx1d5t5nr' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Book2' name='excel-direct.0enj6c20wx2te61bdo1rt03a0hvz'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='D:/Education/IRELAND/NCI/Moodle Documents/SEM 2/DV/CA2/Dataset/New folder/Book2.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.0enj6c20wx2te61bdo1rt03a0hvz' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:D9:no:A1:D9:0' header='yes' outcome='2'>
+            <column datatype='integer' name='Year' ordinal='0' />
+            <column datatype='integer' name='Per capita Real GDP in chained (2012) U.S. dollars' ordinal='1' />
+            <column datatype='real' name='Percentage of individuals using internet (in %)' ordinal='2' />
+            <column datatype='real' name='Smartphone users in millions' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Per capita Real GDP in chained (2012) U.S. dollars</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Per capita Real GDP in chained (2012) U.S. dollars]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Per capita Real GDP in chained (2012) U.S. dollars</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percentage of individuals using internet (in %)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Percentage of individuals using internet (in %)]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Percentage of individuals using internet (in %)</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Smartphone users in millions</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Smartphone users in millions]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Smartphone users in millions</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D9:no:A1:D9:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.447297' measure-ordering='alphabetic' measure-percentage='0.552703' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Reino Unido&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (Book2)' name='federated.07hl5o50t2ydfc18zl9qx1d5t5nr' />
+          </datasources>
+          <datasource-dependencies datasource='federated.07hl5o50t2ydfc18zl9qx1d5t5nr'>
+            <column datatype='integer' name='[Per capita Real GDP in chained (2012) U.S. dollars]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Percentage of individuals using internet (in %)]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Smartphone users in millions]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Per capita Real GDP in chained (2012) U.S. dollars]' derivation='Sum' name='[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Percentage of individuals using internet (in %)]' derivation='Sum' name='[sum:Percentage of individuals using internet (in %):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Smartphone users in millions]' derivation='Sum' name='[sum:Smartphone users in millions:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='background-color' value='#7acdf1' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#1b3c65' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#1b3c65' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#1b3c65' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#1b3c65' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk] + ([federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk] + [federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]))</rows>
+        <cols>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</cols>
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2010</value>
+                <value>50354</value>
+                <value>71.689999999999998</value>
+                <value>62.600000000000001</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='1' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2011</value>
+                <value>50766</value>
+                <value>69.730000000000004</value>
+                <value>92.799999999999997</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='2' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2012</value>
+                <value>51541</value>
+                <value>74.700000000000003</value>
+                <value>122.0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='3' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2013</value>
+                <value>52131</value>
+                <value>71.400000000000006</value>
+                <value>144.5</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='4' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2014</value>
+                <value>53025</value>
+                <value>73.0</value>
+                <value>171.0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='5' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2015</value>
+                <value>54160</value>
+                <value>74.549999999999997</value>
+                <value>190.63999999999999</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='6' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2016</value>
+                <value>54619</value>
+                <value>75.230000000000004</value>
+                <value>208.61000000000001</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='7' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2017</value>
+                <value>55471</value>
+                <value>75.230000000000004</value>
+                <value>246.59999999999999</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='8' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2010</value>
+                <value>50354</value>
+                <value>71.689999999999998</value>
+                <value>62.600000000000001</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='9' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2011</value>
+                <value>50766</value>
+                <value>69.730000000000004</value>
+                <value>92.799999999999997</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='10' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2012</value>
+                <value>51541</value>
+                <value>74.700000000000003</value>
+                <value>122.0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='11' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2013</value>
+                <value>52131</value>
+                <value>71.400000000000006</value>
+                <value>144.5</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='12' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2014</value>
+                <value>53025</value>
+                <value>73.0</value>
+                <value>171.0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='13' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2015</value>
+                <value>54160</value>
+                <value>74.549999999999997</value>
+                <value>190.63999999999999</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='14' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2016</value>
+                <value>54619</value>
+                <value>75.230000000000004</value>
+                <value>208.61000000000001</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='15' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2017</value>
+                <value>55471</value>
+                <value>75.230000000000004</value>
+                <value>246.59999999999999</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='16' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2010</value>
+                <value>50354</value>
+                <value>71.689999999999998</value>
+                <value>62.600000000000001</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='17' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2011</value>
+                <value>50766</value>
+                <value>69.730000000000004</value>
+                <value>92.799999999999997</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='18' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2012</value>
+                <value>51541</value>
+                <value>74.700000000000003</value>
+                <value>122.0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='19' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2013</value>
+                <value>52131</value>
+                <value>71.400000000000006</value>
+                <value>144.5</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='20' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2014</value>
+                <value>53025</value>
+                <value>73.0</value>
+                <value>171.0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='21' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2015</value>
+                <value>54160</value>
+                <value>74.549999999999997</value>
+                <value>190.63999999999999</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='22' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2016</value>
+                <value>54619</value>
+                <value>75.230000000000004</value>
+                <value>208.61000000000001</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='23' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Per capita Real GDP in chained (2012) U.S. dollars:qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Percentage of individuals using internet (in %):qk]</field>
+                  <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[sum:Smartphone users in millions:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2017</value>
+                <value>55471</value>
+                <value>75.230000000000004</value>
+                <value>246.59999999999999</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.07hl5o50t2ydfc18zl9qx1d5t5nr].[none:Year:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
